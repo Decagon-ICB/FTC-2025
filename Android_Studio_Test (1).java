@@ -121,7 +121,7 @@ public class Android_Studio_Test extends LinearOpMode {
             // Optional: Add position limits for the UPPArm_Motor (if needed)
             if (UPPArm_Motor.getCurrentPosition() <= 0 && uppArmSpeed < 0) {
                 uppArmSpeed = 0; // Prevent moving below 0 (down limit)
-            } else if (UPPArm_Motor.getCurrentPosition() >= 1000 && uppArmSpeed > 0) { // Replace 1000 with your own upper limit
+            } else if (UPPArm_Motor.getCurrentPosition() >= 2000 && uppArmSpeed > 0) { // Replace 1000 with your own upper limit
                 uppArmSpeed = 0; // Prevent moving above max height (up limit)
             }
 
@@ -151,7 +151,7 @@ public class Android_Studio_Test extends LinearOpMode {
 
             if(gamepad2.a) {
                 // Open Grabber servo
-                Grabber_Servo.setPosition(0.7);
+                Grabber_Servo.setPosition(0.55);
             }
             else if(gamepad2.y) {
                 // Close Grabber Servo
